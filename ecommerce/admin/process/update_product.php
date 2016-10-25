@@ -9,6 +9,7 @@
   $product_price = $_POST['product_price'];
   $product_warrant = $_POST['product_warrant'];
   $product_count = $_POST['product_count'];
+  $product_important = $_POST['isImportant'];
 
   $target_dir = "../../public/uploads/";
   $name_file = rand(1000000,9999999);
@@ -64,13 +65,14 @@
     $sql = "UPDATE tb_product SET
     product_name = '$product_name', category_name = '$category_name',
     product_detail = '$product_detail', product_price = '$product_price',
-    product_warrant = '$product_warrant', product_count = '$product_count' WHERE id = $id";
+    product_warrant = '$product_warrant', product_count = '$product_count',
+    isImportant = '$product_important' WHERE id = $id";
   } else {
     $sql = "UPDATE tb_product SET
     product_name = '$product_name', category_name = '$category_name',
     product_detail = '$product_detail', product_price = '$product_price',
     product_warrant = '$product_warrant', product_count = '$product_count',
-    product_picture = '$new_name_file' WHERE id = $id";
+    product_picture = '$new_name_file', isImportant = '$product_important' WHERE id = $id";
   }
 
   if ($conn->query($sql) === TRUE) {

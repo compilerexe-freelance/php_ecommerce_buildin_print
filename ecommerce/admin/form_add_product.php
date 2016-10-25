@@ -141,6 +141,18 @@
 
           <div class="control is-horizontal">
             <div class="control-label">
+              <label for="name" class="label">ตั้งเป็นสินค้าแนะนำ</label>
+            </div>
+            <div class="control is-grouped">
+              <p class="control is-expanded">
+                <input type="radio" name="isImportant" value="1" style="margin-top: 10px;"> ใช่
+                <input type="radio" name="isImportant" value="0" style="margin-top: 10px; margin-left: 10px;"> ไม่ใช่
+              </p>
+            </div>
+          </div>
+
+          <div class="control is-horizontal">
+            <div class="control-label">
             </div>
             <div class="control is-grouped">
               <p class="control is-expanded" style="text-align: right;">

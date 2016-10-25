@@ -8,6 +8,7 @@
   $product_price = $_POST['product_price'];
   $product_warrant = $_POST['product_warrant'];
   $product_count = $_POST['product_count'];
+  $product_important = $_POST['isImportant'];
 
   $target_dir = "../../public/uploads/";
   $name_file = rand(1000000,9999999);
@@ -58,8 +59,8 @@
       }
   }
 
-  $sql = "INSERT INTO tb_product (product_name, category_name, product_detail, product_price, product_warrant, product_count, product_picture)
-  VALUES ('$product_name', '$category_name', '$product_detail', '$product_price', '$product_warrant', '$product_count', '$new_name_file')";
+  $sql = "INSERT INTO tb_product (product_name, category_name, product_detail, product_price, product_warrant, product_count, product_picture, isImportant)
+  VALUES ('$product_name', '$category_name', '$product_detail', '$product_price', '$product_warrant', '$product_count', '$new_name_file', '$product_important')";
 
   if ($conn->query($sql) === TRUE) {
     $_SESSION['status'] = 'success';

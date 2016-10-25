@@ -44,7 +44,7 @@
           }
 
           $conn->query("SET NAMES utf8");
-          $sql = "SELECT * FROM tb_product";
+          $sql = "SELECT * FROM tb_product WHERE isImportant = 1";
           $result = mysqli_query($conn, $sql);
           $count = 1;
           $last_count = mysqli_num_rows($result);

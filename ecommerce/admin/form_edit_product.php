@@ -9,6 +9,7 @@
   $product_price = null;
   $product_warrant = null;
   $product_count = null;
+  $isImportant = 0;
 
   $sql = "SELECT * FROM tb_product WHERE id = $id";
   $result = mysqli_query($conn, $sql);
@@ -20,6 +21,7 @@
     $product_price = $row['product_price'];
     $product_warrant = $row['product_warrant'];
     $product_count = $row['product_count'];
+    $isImportant = $row['isImportant'];
   }
 
   mysqli_free_result($result);
@@ -158,6 +160,29 @@
             <div class="control is-grouped">
               <p class="control is-expanded">
                 <input type="file" name="fileUpload">
+              </p>
+            </div>
+          </div>
+
+          <div class="control is-horizontal">
+            <div class="control-label">
+              <label for="name" class="label">ตั้งเป็นสินค้าแนะนำ</label>
+            </div>
+            <div class="control is-grouped">
+              <p class="control is-expanded">
+                <?php
+                  if ($isImportant == 1) {
+                    echo '
+                      <input type="radio" name="isImportant" value="1" style="margin-top: 10px;" checked> ใช่
+                      <input type="radio" name="isImportant" value="0" style="margin-top: 10px; margin-left: 10px;"> ไม่ใช่
+                    ';
+                  } else {
+                    echo '
+                      <input type="radio" name="isImportant" value="1" style="margin-top: 10px;"> ใช่
+                      <input type="radio" name="isImportant" value="0" style="margin-top: 10px; margin-left: 10px;"checked> ไม่ใช่
+                    ';
+                  }
+                ?>
               </p>
             </div>
           </div>
