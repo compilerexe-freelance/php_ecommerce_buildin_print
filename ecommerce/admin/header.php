@@ -1,3 +1,13 @@
+<?php
+  session_start();
+  if (!isset($_SESSION['admin'])) {
+    if ($_SESSION['admin'] != 'success') {
+      header('Location: login.php');
+      exit(0);
+    }
+  }
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -61,7 +71,7 @@
         </div> -->
 
         <div class="column">
-          <a href="#" class="button is-primary is-medium">
+          <a href="info_admin.php" class="button is-primary is-medium">
             <img src="../public/images/icons/user.png" alt="" style="height: 30px; margin-right: 10px;">
             บัญชีผู้ใช้งาน
           </a>

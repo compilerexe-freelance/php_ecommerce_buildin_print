@@ -7,11 +7,11 @@
       <ul style="text-align: left;">
         <li><a href="form_add_product.php" class="button is-link" style="text-decoration: none;">- จัดการสินค้า</a></li>
         <li><a href="form_add_category.php" class="button is-link" style="text-decoration: none;">- จัดการหมวดหมู่สินค้า</a></li>
-        <li><a href="#" class="button is-link" style="text-decoration: none;">- จัดการสต๊อกสินค้า</a></li>
+        <li><a href="stock.php" class="button is-link" style="text-decoration: none;">- จัดการสต๊อกสินค้า</a></li>
       </ul>
     </div><br>
-    <a href="#" class="button is-info is-medium" style="width: 100%; margin-bottom: 10px;">ข้อมูลลูกค้า</a>
-    <a href="#" class="button is-info is-medium" style="width: 100%; margin-bottom: 10px;">รายงานการสั่งซื้อ</a>
+    <a href="list_member.php" class="button is-info is-medium" style="width: 100%; margin-bottom: 10px;">ข้อมูลสมาชิก</a>
+    <a href="list_order.php" class="button is-info is-medium" style="width: 100%; margin-bottom: 10px;">รายการสั่งซื้อ</a>
   </div>
 
 </div>

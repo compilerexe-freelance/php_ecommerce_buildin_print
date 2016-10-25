@@ -41,7 +41,7 @@
     }
 
   }
-  
+
   header('Location: ../print_order.php');
   exit(0);
 ?>

@@ -1,5 +1,6 @@
 <?php
   session_start();
+  error_reporting(0);
   $_SESSION['menu'] = 'home';
   include('header.php');
   include('config.php');

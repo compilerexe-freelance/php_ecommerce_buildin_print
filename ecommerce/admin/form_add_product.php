@@ -1,5 +1,5 @@
 <?php
-  session_start();
+  // session_start();
   include('header.php');
   include('process/config.php');
 
@@ -164,4 +164,4 @@
     });
   </script>
 
-<?php include('footer.php');
+<?php include('footer.php'); ?>

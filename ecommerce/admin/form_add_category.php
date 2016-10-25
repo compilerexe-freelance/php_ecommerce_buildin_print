@@ -1,5 +1,5 @@
 <?php
-  session_start();
+  // session_start();
   include('header.php');
 
   if (isset($_SESSION['status'])) {

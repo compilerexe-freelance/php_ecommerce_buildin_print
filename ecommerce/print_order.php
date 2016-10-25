@@ -160,4 +160,5 @@
   $pdf->Output();
 
   $_SESSION['myproduct'] = null;
+  $_SESSION['order_number'] = null;
 ?>
